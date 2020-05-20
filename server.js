@@ -4,13 +4,13 @@ const WebSocket = require('ws');
 const path = require('path');
 const EventHubReader = require('./scripts/event-hub-reader.js');
 
-// const iotHubConnectionString = process.env.IotHubConnectionString;
-const iotHubConnectionString = 'HostName=iothubbridge.azure-devices.net;SharedAccessKeyName=service;SharedAccessKey=yozMUASVOKVHGmfMdOUNRi5ut7QooxbixLWGzhGLh4E=';
-// const iotHubConnectionString = 'Endpoint=sb://ihsuprodsgres025dednamespace.servicebus.windows.net/;SharedAccessKeyName=iothubowner;SharedAccessKey=mmPeDA/4IgySNQL9f8t2IZ9Jn5btKnZdQlaPIvi08jA=;EntityPath=iothub-ehub-iothubbrid-2397820-1f2c0a1f5c';
+const iotHubConnectionString = process.env.IotHubConnectionString;
 
 
-// const eventHubConsumerGroup = process.env.EventHubConsumerGroup;
-const eventHubConsumerGroup = 'mnc-app'
+
+
+const eventHubConsumerGroup = process.env.EventHubConsumerGroup;
+
 
 // Redirect requests to the public subdirectory to the root
 const app = express();
